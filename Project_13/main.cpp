@@ -1,21 +1,8 @@
-/*#include<iostream>
-#include "findSpanningTree.cpp"
-
+#include "findAdjacencyMatrix.h"
 int main()
 {
-    findSpanningTree();
+    string fileIn = "file_in.txt";
+    string fileOut = "file_out.txt";
 
-    return 0;
-}*/
-//#include<iostream>
-//#include<string>
-//#include<fstream>
-//#include <vector>
-//#include <ctype.h>
-//#include <assert.h>
-#include "findSpanningTree.h"
-//using namespace std;
-int main()
-{
-    findSpanningTree("file_in.txt", "file_out.txt");
+    findAdjacencyMatrix(fileIn, fileOut);
 }
