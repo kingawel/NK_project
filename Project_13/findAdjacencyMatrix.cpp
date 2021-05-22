@@ -4,18 +4,18 @@
 #include <assert.h>
 #include "findAdjacencyMatrix.h"
 
-int ** create2DArray(int row, int col)
+bool ** create2DArray(int row, int col)
 {
-    int **myArray = new int* [row];
+    bool **myArray = new bool* [row];
     for (int i = 0; i < row; i++) {
 
-        myArray[i] = new int[col];
+        myArray[i] = new bool[col];
     }
     return myArray;
 }
 
 //void DFS()
-int** findAdjacencyMatrix(string fileIn, string fileOut)
+bool** findAdjacencyMatrix(string fileIn, string fileOut)
 {
     int lineCount = 0;
     string line;
@@ -23,8 +23,7 @@ int** findAdjacencyMatrix(string fileIn, string fileOut)
     vector<char> listOfFirstLetters;
     vector<char> listOfLastLetters;
     string temp;
-   // vector<string> temp;
-    vector<vector<string>> adjacencyMatrix;
+    int V = 0;  //start vertex
     int N = 0 ;
 
     ifstream dataIn(fileIn.c_str());
@@ -39,29 +38,47 @@ int** findAdjacencyMatrix(string fileIn, string fileOut)
 
     for (int i = 0; i < listOfCities.size(); i++)
     {
+
         temp = listOfCities[i];
         listOfFirstLetters.push_back(temp[0]);
         listOfLastLetters.push_back(temp[temp.size() - 1]);
-
+        if (listOfCities[i] == "Krakow" || listOfCities[i] == "krakow" || listOfCities[i] == "kraków" || listOfCities[i] == "Kraków")
+        {
+            V = i;
+        }
         assert(isalpha(listOfFirstLetters[i]) && isalpha(listOfLastLetters[i]));
         cout << listOfCities[i] << endl;
 
     }
     //Create 2D Array
-    int** myArray = create2DArray(N,N);
+    bool** adjacencyMatrix = create2DArray(N,N);
 
     for (int i = 0; i < listOfFirstLetters.size(); i++)
     { 
         for (int j = 0; j < N; j++)
         {
-         //TODO
+            if ((char)tolower(listOfLastLetters[i]) == (char)tolower(listOfFirstLetters[j]))
+            {
+                if (i != j)
+                {
+                    adjacencyMatrix[i][j] = true;
+                }
+                else adjacencyMatrix[i][j] = false;
+            }
+            else adjacencyMatrix[i][j] = false;
+    
         }
 
     }
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            cout << adjacencyMatrix[i][j];
+        }
+        cout << endl;
+    }
 
-    cout << myArray[0][0] << endl;
-    cout << myArray[1][0] << endl;
-    cout << myArray[2][2] << endl;;
     for (int i = 0; i < listOfFirstLetters.size(); i++)
     {
         
@@ -70,5 +87,5 @@ int** findAdjacencyMatrix(string fileIn, string fileOut)
     }
 
     cout << listOfCities.size() << endl;
-    return myArray;
+    return adjacencyMatrix;
 }

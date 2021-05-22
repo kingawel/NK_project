@@ -1,6 +1,5 @@
 ﻿  findAdjacencyMatrix.cpp
-C:\Users\user\Desktop\Studia\NK\Project\Project_13\findAdjacencyMatrix.cpp(43,23): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\Desktop\Studia\NK\Project\Project_13\findAdjacencyMatrix.cpp(55,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\Desktop\Studia\NK\Project\Project_13\findAdjacencyMatrix.cpp(55,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\user\Desktop\Studia\NK\Project\Project_13\findAdjacencyMatrix.cpp(69,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\Desktop\Studia\NK\Project\Project_13\findAdjacencyMatrix.cpp(39,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\Desktop\Studia\NK\Project\Project_13\findAdjacencyMatrix.cpp(56,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\Desktop\Studia\NK\Project\Project_13\findAdjacencyMatrix.cpp(82,23): warning C4018: '<': signed/unsigned mismatch
   Project_13.vcxproj -> C:\Users\user\Desktop\Studia\NK\Project\Project_13\Debug\Project_13.exe
