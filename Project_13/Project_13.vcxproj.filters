@@ -26,6 +26,12 @@
     <ClCompile Include="findAdjacencyMatrix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DFS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="findSpanningTree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="file_in.txt">
@@ -37,6 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="findAdjacencyMatrix.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DFS.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="findSpanningTree.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

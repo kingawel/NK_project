@@ -142,7 +142,9 @@
     <None Include="..\README.md" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DFS.cpp" />
     <ClCompile Include="findAdjacencyMatrix.cpp" />
+    <ClCompile Include="findSpanningTree.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -150,7 +152,9 @@
     <Text Include="file_out.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DFS.h" />
     <ClInclude Include="findAdjacencyMatrix.h" />
+    <ClInclude Include="findSpanningTree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,5 +1,4 @@
-﻿  findAdjacencyMatrix.cpp
-C:\Users\user\Desktop\Studia\NK\Project\Project_13\findAdjacencyMatrix.cpp(39,23): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\Desktop\Studia\NK\Project\Project_13\findAdjacencyMatrix.cpp(56,23): warning C4018: '<': signed/unsigned mismatch
-C:\Users\user\Desktop\Studia\NK\Project\Project_13\findAdjacencyMatrix.cpp(82,23): warning C4018: '<': signed/unsigned mismatch
+﻿  findSpanningTree.cpp
+C:\Users\user\Desktop\Studia\NK\Project\Project_13\findSpanningTree.cpp(18,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\user\Desktop\Studia\NK\Project\Project_13\findSpanningTree.cpp(29,21): warning C4018: '<': signed/unsigned mismatch
   Project_13.vcxproj -> C:\Users\user\Desktop\Studia\NK\Project\Project_13\Debug\Project_13.exe

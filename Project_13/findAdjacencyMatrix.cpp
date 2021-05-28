@@ -1,4 +1,3 @@
-#include<fstream>
 #include <vector>
 #include <ctype.h>
 #include <assert.h>
@@ -14,20 +13,20 @@ bool ** create2DArray(int row, int col)
     return myArray;
 }
 
-//void DFS()
-bool** findAdjacencyMatrix(string fileIn, string fileOut)
+
+bool** findAdjacencyMatrix(string fileIn, string fileOut, int &V, vector<string> &listOfCities)
 {
     int lineCount = 0;
     string line;
-    vector<string> listOfCities;
     vector<char> listOfFirstLetters;
     vector<char> listOfLastLetters;
     string temp;
-    int V = 0;  //start vertex
+    bool isCracow = false;
+    V = 0;  //start vertex
     int N = 0 ;
 
     ifstream dataIn(fileIn.c_str());
-    ofstream dataOut(fileOut.c_str());
+  //  ofstream dataOut(fileOut.c_str());
 
     while (dataIn.good())
     {
@@ -45,11 +44,14 @@ bool** findAdjacencyMatrix(string fileIn, string fileOut)
         if (listOfCities[i] == "Krakow" || listOfCities[i] == "krakow" || listOfCities[i] == "kraków" || listOfCities[i] == "Kraków")
         {
             V = i;
+            isCracow = true;
         }
         assert(isalpha(listOfFirstLetters[i]) && isalpha(listOfLastLetters[i]));
         cout << listOfCities[i] << endl;
 
     }
+    assert(isCracow == true && "There is no Cracow");
+
     //Create 2D Array
     bool** adjacencyMatrix = create2DArray(N,N);
 
@@ -87,5 +89,7 @@ bool** findAdjacencyMatrix(string fileIn, string fileOut)
     }
 
     cout << listOfCities.size() << endl;
+    cout << endl;
+    cout << sizeof(adjacencyMatrix) << endl;
     return adjacencyMatrix;
 }
